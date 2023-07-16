@@ -1,0 +1,41 @@
+<body>
+  <div id="follow-btn"></div>
+
+  <style>
+    #follow-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh; /* ارتفاع العنصر بالنسبة لارتفاع الصفحة */
+    }
+    
+    #follow-btn button {
+      font-size: 2em; /* حجم الخط */
+      padding: 20px 40px; /* المسافات الداخلية للزر */
+    }
+  </style>
+
+  <script>
+    window.addEventListener("load", function() {
+      if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android)/)) {
+        // أوامر للجوال
+        var followBtn = document.getElementById("follow-btn");
+        var btn = document.createElement("button");
+        btn.innerHTML = "متابعة";
+        followBtn.appendChild(btn);
+        btn.addEventListener("click", function() {
+          window.location.href = "uu/androed.html";
+        });
+      } else {
+        // أوامر للكمبيوتر
+        var followBtn = document.getElementById("follow-btn");
+        var btn = document.createElement("button");
+        btn.innerHTML = "متابعة";
+        followBtn.appendChild(btn);
+        btn.addEventListener("click", function() {
+          window.location.href = "uu/pc.html";
+        });
+      }
+    });
+  </script>
+</body>
