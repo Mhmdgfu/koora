@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Koora</title>
+
+  <body style="background-color: darkgreen;">
+<div style="display: flex; flex-direction: column; justify-content: center;">
+  <h2 style="text-align: center; background-color: #757575;">Follow the latest matches</h2>
+  <button style="padding: 10px 20px; min-width: 150px; margin-bottom: 10px;" onclick="openLink3()"><h2>Show results</h2></button>
+<button style="padding: 10px 20px; min-width: 150px; margin-bottom: 10px;" onclick="openLink1()"><h2>bein sport channel</h2></button>
+<button style="padding: 10px 67px; min-width: 90px; margin-bottom: 10px;" onclick="openLink()"><h2>live feed</h2></button>
+<button style="padding: 10px 90px; min-width: 90px; margin-bottom: 10px;" onclick="openLink2()"><h2>more</h2></button>
+<button onclick="window.location.href='haa.html'" style="padding: 10px 30px; min-width: 90px; margin-bottom: 10px;"><h2>معلومات الموقع</h2></button>
+<h3 style="text-align: center; margin-top: 10px; background-color: #757575;"></h3>
+<a href="https://www.mediafire.com/file/9xoqrdfzi5itwq2/1.1_%D9%83%D9%88%D8%B1%D8%A9.apk/file" style="display: block; margin-top: 20px; text-align: center;"></a>
+</div>
+
+<style>
+  body {
+    zoom: 2.5;
+  }
+</style>
+
+<script>
+  function openLink() {
+    let link = "https://www.livehd7.id/";  
+    window.open(link);
+  }  
+  </script>
+
+<script>
+  function openLink1() {
+    let link = "https://www.beinsports.com/en-mena";  
+    window.open(link);
+  }  
+  </script>
+
+<script>
+  function openLink2() {
+    let link = "https://www.kooora.com/";  
+    window.open(link);
+  }  
+  </script>
+
+    <script>
+  function openLink3() {
+    let link = "https://www.livehd7.id/";  
+    window.open(link);
+  }  
+  </script>
+<body>
+</head>
+<body>
+
+  <bodx>
+    </html>
