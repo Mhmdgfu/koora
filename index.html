@@ -21,7 +21,7 @@
         // أوامر للجوال
         var followBtn = document.getElementById("follow-btn");
         var btn = document.createElement("button");
-        btn.innerHTML = "متابعة";
+        btn.innerHTML = "العربية";
         followBtn.appendChild(btn);
         btn.addEventListener("click", function() {
           window.location.href = "uu/androed.html";
@@ -30,10 +30,33 @@
         // أوامر للكمبيوتر
         var followBtn = document.getElementById("follow-btn");
         var btn = document.createElement("button");
-        btn.innerHTML = "متابعة";
+        btn.innerHTML = "العربية";
         followBtn.appendChild(btn);
         btn.addEventListener("click", function() {
           window.location.href = "uu/pc.html";
+        });
+      }
+    });
+  </script>
+  <script>
+    window.addEventListener("load", function() {
+      if (navigator.userAgent.match(/(iPhone|iPod|Android)/)) {
+        // أوامر للجوال
+        var followBtn = document.getElementById("follow-btn");
+        var btn = document.createElement("button");
+        btn.innerHTML = "English";
+        followBtn.appendChild(btn);
+        btn.addEventListener("click", function() {
+          window.location.href = "uu/androiden.html";
+        });
+      } else {
+        // أوامر للكمبيوتر
+        var followBtn = document.getElementById("follow-btn");
+        var btn = document.createElement("button");
+        btn.innerHTML = "English";
+        followBtn.appendChild(btn);
+        btn.addEventListener("click", function() {
+          window.location.href = "uu/pcen.html";
         });
       }
     });
