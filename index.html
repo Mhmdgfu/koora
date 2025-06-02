@@ -9,14 +9,17 @@
         align-items: center;
         height: 80vh; /* ارتفاع العنصر بالنسبة لارتفاع الصفحة */
         gap: 10px; /* مسافة بين الأزرار */
+        padding: 10px; /* هامش داخلي لتجنب تلاصق الأزرار بحواف الشاشة */
     }
     
     #follow-btn button {
         font-size: 2em; /* حجم الخط */
         padding: 20px 40px; /* المسافات الداخلية للزر */
         width: 100%; /* جعل الأزرار بنفس عرض العنصر الحاوي لها */
+        max-width: 400px; /* الحد الأقصى لعرض الزر لتجنب تمدده بشكل مفرط على الشاشات الكبيرة */
     }
-  </style>
+</style>
+
 
   <script>
     window.addEventListener("load", function() {
