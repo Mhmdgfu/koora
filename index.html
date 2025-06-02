@@ -4,64 +4,39 @@
   <style>
     #follow-btn {
         display: flex;
+        flex-direction: column; /* ترتيب العناصر عموديًا */
         justify-content: center;
         align-items: center;
         height: 80vh; /* ارتفاع العنصر بالنسبة لارتفاع الصفحة */
+        gap: 10px; /* مسافة بين الأزرار */
     }
     
     #follow-btn button {
-        font-size: 10em; /* حجم الخط */
+        font-size: 2em; /* حجم الخط */
         padding: 20px 40px; /* المسافات الداخلية للزر */
-        width: 100%; /* يجعل الزر بنفس عرض العنصر الحاوي له */
+        width: 100%; /* جعل الأزرار بنفس عرض العنصر الحاوي لها */
     }
-</style>
+  </style>
 
   <script>
     window.addEventListener("load", function() {
-      if (navigator.userAgent.match(/(iPhone|iPod|Android)/)) {
-        // أوامر للجوال
-        var followBtn = document.getElementById("follow-btn");
-        var btn = document.createElement("button");
-        btn.innerHTML = "English";
-        followBtn.appendChild(btn);
-        btn.addEventListener("click", function() {
-          window.location.href = "uu/androiden.html";
-        });
-      } else {
-        // أوامر للكمبيوتر
-        var followBtn = document.getElementById("follow-btn");
-        var btn = document.createElement("button");
-        btn.innerHTML = "English";
-        followBtn.appendChild(btn);
-        btn.addEventListener("click", function() {
-          window.location.href = "uu/pcen.html";
-        });
-      }
-    });
-  </script>
+      var followBtn = document.getElementById("follow-btn");
 
-  <script>
-    window.addEventListener("load", function() {
-      if (navigator.userAgent.match(/(iPhone|iPod|Android)/)) {
-        // أوامر للجوال
-        var followBtn = document.getElementById("follow-btn");
-        var btn = document.createElement("button");
-        btn.innerHTML = "العربية";
-        followBtn.appendChild(btn);
-        btn.addEventListener("click", function() {
-          window.location.href = "uu/androed.html";
-        });
-      } else {
-        // أوامر للكمبيوتر
-        var followBtn = document.getElementById("follow-btn");
-        var btn = document.createElement("button");
-        btn.innerHTML = "العربية";
-        followBtn.appendChild(btn);
-        btn.addEventListener("click", function() {
-          window.location.href = "uu/pc.html";
-        });
-      }
+      // زر اللغة الإنجليزية
+      var btnEng = document.createElement("button");
+      btnEng.innerHTML = "English";
+      followBtn.appendChild(btnEng);
+      btnEng.addEventListener("click", function() {
+        window.location.href = navigator.userAgent.match(/(iPhone|iPod|Android)/) ? "uu/androiden.html" : "uu/pcen.html";
+      });
+
+      // زر اللغة العربية
+      var btnAr = document.createElement("button");
+      btnAr.innerHTML = "العربية";
+      followBtn.appendChild(btnAr);
+      btnAr.addEventListener("click", function() {
+        window.location.href = navigator.userAgent.match(/(iPhone|iPod|Android)/) ? "uu/androed.html" : "uu/pc.html";
+      });
     });
   </script>
-  
 </body>
