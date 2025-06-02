@@ -23,23 +23,24 @@
 
   <script>
     window.addEventListener("load", function() {
-      var followBtn = document.getElementById("follow-btn");
+        var followBtn = document.getElementById("follow-btn");
 
-      // زر اللغة العربية
-      var btnAr = document.createElement("button");
-      btnAr.innerHTML = "العربية";
-      followBtn.appendChild(btnAr);
-      btnAr.addEventListener("click", function() {
-        window.location.href = navigator.userAgent.match(/(iPhone|iPod|Android)/) ? "uu/androed.html" : "uu/pc.html";
-      });
+        // زر اللغة العربية (يتم إضافته أولًا)
+        var btnAr = document.createElement("button");
+        btnAr.innerHTML = "العربية";
+        followBtn.appendChild(btnAr);
+        btnAr.addEventListener("click", function() {
+            window.location.href = navigator.userAgent.match(/(iPhone|iPod|Android)/) ? "uu/androed.html" : "uu/pc.html";
+        });
 
-      // زر اللغة الإنجليزية
-      var btnEng = document.createElement("button");
-      btnEng.innerHTML = "English";
-      followBtn.appendChild(btnEng);
-      btnEng.addEventListener("click", function() {
-        window.location.href = navigator.userAgent.match(/(iPhone|iPod|Android)/) ? "uu/androiden.html" : "uu/pcen.html";
-      });
+        // زر اللغة الإنجليزية (يتم إضافته بعد زر العربية)
+        var btnEng = document.createElement("button");
+        btnEng.innerHTML = "English";
+        followBtn.appendChild(btnEng);
+        btnEng.addEventListener("click", function() {
+            window.location.href = navigator.userAgent.match(/(iPhone|iPod|Android)/) ? "uu/androiden.html" : "uu/pcen.html";
+        });
     });
-  </script>
+</script>
+
 </body>
