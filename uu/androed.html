@@ -1,26 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <title>كووورا</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <style>
         body {
-            background-color: darkgreen; /* الخلفية */
-            zoom: 2.5; /* التكبير */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
+            background-color: darkgreen;
         }
 
-        #button-container {
+        div {
             display: flex;
-            flex-direction: column; /* ترتيب الأزرار عموديًا */
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            gap: 10px; /* ترك مسافة بين الأزرار */
-            width: 100%;
-            max-width: 400px; /* منع تمدد الزر بشكل مفرط على الشاشات الكبيرة */
         }
 
         h2 {
@@ -31,19 +23,10 @@
         }
 
         button {
-            font-size: 1.8em; /* حجم النص محسّن */
-            padding: 15px 30px; /* ضبط المسافات الداخلية */
-            width: 100%; /* جعل الأزرار تغطي عرض الشاشة بالكامل */
-            border: none; /* إزالة الحدود الافتراضية */
-            color: white; /* لون النص */
-            background-color: #333; /* لون الزر */
-            cursor: pointer; /* تغيير المؤشر عند تمرير الماوس */
-            border-radius: 5px; /* جعل الحواف مستديرة */
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background-color: #555; /* تحسين تأثير التفاعل */
+            padding: 10px 20px;
+            min-width: 150px;
+            margin-bottom: 10px;
+            font-size: 1.5em;
         }
 
         a {
@@ -58,14 +41,13 @@
 </head>
 <body>
 
-    <h2>تابع آخر المباريات</h2>
-
-    <div id="button-container">
+    <div>
+        <h2>تابع آخر المباريات</h2>
         <button onclick="openLink3()"><h2>عرض النتائج</h2></button>
         <button onclick="openLink1()"><h2>قناة بي ان سبورت</h2></button>
-        <button onclick="openLink()"><h2>بث مباشر</h2></button>
-        <button onclick="openLink2()"><h2>أكثر</h2></button>
-        <button onclick="window.location.href='haa.html'"><h2>معلومات الموقع</h2></button>
+        <button style="padding: 10px 67px; min-width: 90px; margin-bottom: 10px;" onclick="openLink()"><h2>بث مباشر</h2></button>
+        <button style="padding: 10px 90px; min-width: 90px; margin-bottom: 10px;" onclick="openLink2()"><h2>أكثر</h2></button>
+        <button onclick="window.location.href='haa.html'" style="padding: 10px 30px; min-width: 90px; margin-bottom: 10px;"><h2>معلومات الموقع</h2></button>
     </div>
 
     <a href="https://www.mediafire.com/file/9xoqrdfzi5itwq2/1.1_%D9%83%D9%88%D8%B1%D8%A9.apk/file">تحميل التطبيق</a>
