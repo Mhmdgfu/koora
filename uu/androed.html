@@ -2,10 +2,10 @@
 <html lang="ar">
 <head>
     <title>كووورا</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <style>
         body {
-            background-color: darkgreen;
+            background-color: darkgreen; /* الخلفية */
+            zoom: 2.5; /* التكبير */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -18,9 +18,9 @@
             display: flex;
             flex-direction: column; /* ترتيب الأزرار عموديًا */
             align-items: center;
-            gap: 15px; /* ترك مسافة مناسبة بين الأزرار */
-            width: 90%;
-            max-width: 500px;
+            gap: 10px; /* ترك مسافة بين الأزرار */
+            width: 100%;
+            max-width: 400px; /* منع تمدد الزر بشكل مفرط على الشاشات الكبيرة */
         }
 
         h2 {
@@ -28,23 +28,22 @@
             background-color: #757575;
             padding: 10px;
             width: 100%;
-            font-size: 1.6em;
         }
 
         button {
-            font-size: 1.2em; /* حجم النص محسّن ليتناسب مع الأجهزة */
-            padding: 12px 25px; /* ضبط المسافات الداخلية */
-            width: 100%; /* جعل الأزرار تغطي عرض العنصر الحاوي لها */
-            border: none; /* إزالة الحدود */
-            color: white;
-            background-color: #333;
-            cursor: pointer;
-            border-radius: 5px;
+            font-size: 1.8em; /* حجم النص محسّن */
+            padding: 15px 30px; /* ضبط المسافات الداخلية */
+            width: 100%; /* جعل الأزرار تغطي عرض الشاشة بالكامل */
+            border: none; /* إزالة الحدود الافتراضية */
+            color: white; /* لون النص */
+            background-color: #333; /* لون الزر */
+            cursor: pointer; /* تغيير المؤشر عند تمرير الماوس */
+            border-radius: 5px; /* جعل الحواف مستديرة */
             transition: 0.3s;
         }
 
         button:hover {
-            background-color: #555;
+            background-color: #555; /* تحسين تأثير التفاعل */
         }
 
         a {
@@ -62,11 +61,11 @@
     <h2>تابع آخر المباريات</h2>
 
     <div id="button-container">
-        <button onclick="openLink3()">عرض النتائج</button>
-        <button onclick="openLink1()">قناة بي ان سبورت</button>
-        <button onclick="openLink()">بث مباشر</button>
-        <button onclick="openLink2()">أكثر</button>
-        <button onclick="window.location.href='haa.html'">معلومات الموقع</button>
+        <button onclick="openLink3()"><h2>عرض النتائج</h2></button>
+        <button onclick="openLink1()"><h2>قناة بي ان سبورت</h2></button>
+        <button onclick="openLink()"><h2>بث مباشر</h2></button>
+        <button onclick="openLink2()"><h2>أكثر</h2></button>
+        <button onclick="window.location.href='haa.html'"><h2>معلومات الموقع</h2></button>
     </div>
 
     <a href="https://www.mediafire.com/file/9xoqrdfzi5itwq2/1.1_%D9%83%D9%88%D8%B1%D8%A9.apk/file">تحميل التطبيق</a>
