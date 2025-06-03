@@ -1,65 +1,53 @@
 <!DOCTYPE html>
 <html lang="ar">
-      <div id="follow-btn"></div>
 <head>
     <title>كووورا</title>
-      
-        <style>
-    #follow-btn {
-        gap: 30px; /* مسافة بين الأزرار */
-    }
-</style>
-      
-<meta name="viewport" content="width=device-width">
-      
-    <body style="background-color: darkgreen;">
-    <div style="display: flex; flex-direction: column; justify-content: center;">
+    <meta name="viewport" content="width=device-width">
+    <style>
+        body {
+            background-color: darkgreen;
+            zoom: 2.5;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
         <h2 style="text-align: center; background-color: #757575;">تابع آخر المباريات</h2>
-        <button  onclick="openLink3()"><h2>عرض النتائج</h2></button>
-        <button  onclick="openLink1()"><h2>قناة بي إن سبورت</h2></button>
-        <button  onclick="openLink()"><h2>بث مباشر</h2></button>
-        <button  onclick="openLink2()"><h2>المزيد</h2></button>
-        <button onclick="window.location.href='haa.html'"><h2>معلومات الموقع</h2></button>
+        <button onclick="openLink3()">عرض النتائج</button>
+        <button onclick="openLink1()">قناة بي إن سبورت</button>
+        <button onclick="openLink()">بث مباشر</button>
+        <button onclick="openLink2()">المزيد</button>
+        <button onclick="window.location.href='haa.html'">معلومات الموقع</button>
         <h3 style="text-align: center; margin-top: 10px; background-color: #757575;"></h3>
         <a href="https://www.mediafire.com/file/9xoqrdfzi5itwq2/1.1_%D9%83%D9%88%D8%B1%D8%A9.apk/file" style="display: block; margin-top: 20px; text-align: center;"></a>
     </div>
 
-    <style>
-        body {
-            zoom: 2.5;
-        }
-    </style>
-
     <script>
         function openLink() {
-            let link = "https://www.beinsports.com/ar-mena";  
-            window.open(link);
+            window.open("https://www.beinsports.com/ar-mena");
         }  
-    </script>
-
-    <script>
         function openLink1() {
-            let link = "https://www.youtube.com/@beINSPORTS/streams";  
-            window.open(link);
+            window.open("https://www.youtube.com/@beINSPORTS/streams");
         }  
-    </script>
-
-    <script>
         function openLink2() {
-            let link = "https://www.kooora.com/";  
-            window.open(link);
+            window.open("https://www.kooora.com/");
         }  
-    </script>
-
-    <script>
         function openLink3() {
-            let link = "https://www.hd7.live/";  
-            window.open(link);
+            window.open("https://www.hd7.live/");
         }  
     </script>
-
-    </body>
-</head>
-<body>
 </body>
 </html>
