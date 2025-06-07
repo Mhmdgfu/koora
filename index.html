@@ -1,51 +1,69 @@
-<body style="background-color: black;">
-  <div id="follow-btn"></div>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>انتقال تلقائي</title>
+    <style>
+        #follow-btn {
+            display: flex;
+            flex-direction: column; /* ترتيب النص فوق الأزرار */
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            gap: 15px;
+            padding: 10px;
+        }
 
-  <style>
-    #follow-btn {
-        display: flex;
-        flex-direction: column; /* ترتيب العناصر عموديًا */
-        justify-content: center;
-        align-items: center;
-        height: 80vh; /* ارتفاع العنصر بالنسبة لارتفاع الصفحة */
-        gap: 10px; /* مسافة بين الأزرار */
-        padding: 10px; /* هامش داخلي لتجنب تلاصق الأزرار بحواف الشاشة */
-    }
-    
-    #follow-btn button {
-        cursor: pointer;
-        font-size: 2em; /* حجم الخط */
-        padding: 20px 40px; /* المسافات الداخلية للزر */
-        width: 100%; /* جعل الأزرار بنفس عرض العنصر الحاوي لها */
-        max-width: 400px; /* الحد الأقصى لعرض الزر لتجنب تمدده بشكل مفرط على الشاشات الكبيرة */
-        transition: background-color 0.3s ease-in-out;
-    }
-    #follow-btn button:hover {
+        h1 {
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: -5px 0; /* تقليل الهوامش العمودية */
+        }
+
+
+        button {
+            cursor: pointer;
+            font-size: 2em;
+            padding: 20px 40px;
+            width: 100%;
+            max-width: 400px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
             background-color: rgb(180, 180, 180);
-    }
-</style>
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+    <div id="follow-btn">
+        <h1>اختر اللغة</h1>
+        <h1>Select language</h1>
+        <br>
+    </div>
 
+    <script>
+        window.addEventListener("load", function() {
+            var followBtn = document.getElementById("follow-btn");
 
-  <script>
-    window.addEventListener("load", function() {
-        var followBtn = document.getElementById("follow-btn");
+            // زر اللغة العربية
+            var btnAr = document.createElement("button");
+            btnAr.innerHTML = "العربية";
+            followBtn.appendChild(btnAr);
+            btnAr.addEventListener("click", function() {
+                window.location.href = navigator.userAgent.match(/(iPhone|iPod|Android)/) ? "uu/androed.html" : "uu/pc.html";
+            });
 
-        // زر اللغة العربية (يتم إضافته أولًا)
-        var btnAr = document.createElement("button");
-        btnAr.innerHTML = "العربية";
-        followBtn.appendChild(btnAr);
-        btnAr.addEventListener("click", function() {
-            window.location.href = navigator.userAgent.match(/(iPhone|iPod|Android)/) ? "uu/androed.html" : "uu/pc.html";
+            // زر اللغة الإنجليزية
+            var btnEng = document.createElement("button");
+            btnEng.innerHTML = "English";
+            followBtn.appendChild(btnEng);
+            btnEng.addEventListener("click", function() {
+                window.location.href = navigator.userAgent.match(/(iPhone|iPod|Android)/) ? "uu/androiden.html" : "uu/pcen.html";
+            });
         });
-
-        // زر اللغة الإنجليزية (يتم إضافته بعد زر العربية)
-        var btnEng = document.createElement("button");
-        btnEng.innerHTML = "English";
-        followBtn.appendChild(btnEng);
-        btnEng.addEventListener("click", function() {
-            window.location.href = navigator.userAgent.match(/(iPhone|iPod|Android)/) ? "uu/androiden.html" : "uu/pcen.html";
-        });
-    });
-</script>
-  
+    </script>
 </body>
+</html>
