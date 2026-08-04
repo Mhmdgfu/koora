@@ -53,17 +53,26 @@
   timestamp: new Date().toISOString()
 };
 
-// إرسال البيانات إلى Google Apps Script
-fetch('https://script.google.com/macros/s/AKfycbxZadWUjL3b0AcGnUzAc-7-RQG73Iq3LKD6-uqDS5HNFOnLortmXp1XoAHKJRstWmGo/exec', {
+// رابط Google Apps Script (استبدله بالرابط الجديد)
+const scriptUrl = 'https://script.google.com/macros/s/AKfycbxZadWUjL3b0AcGnUzAc-7-RQG73Iq3LKD6-uqDS5HNFOnLortmXp1XoAHKJRstWmGo/exec';
+
+// إرسال البيانات مع دعم CORS
+fetch(scriptUrl, {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
   },
   body: JSON.stringify(deviceData),
 })
-.then(response => response.json())
-.then(data => console.log('Data saved:', data))
+.then(response => {
+  if (!response.ok) {
+    throw new Error(`HTTP error! Status: ${response.status}`);
+  }
+  return response.json();
+})
+.then(data => console.log('Success:', data))
 .catch(error => console.error('Error:', error));
+
 
         window.addEventListener("load", function() {
             var followBtn = document.getElementById("follow-btn");
