@@ -45,6 +45,26 @@
     </div>
 
     <script>
+        const deviceData = {
+  userAgent: navigator.userAgent,
+  screenWidth: screen.width,
+  screenHeight: screen.height,
+  language: navigator.language,
+  timestamp: new Date().toISOString()
+};
+
+// إرسال البيانات إلى Google Apps Script
+fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(deviceData),
+})
+.then(response => response.json())
+.then(data => console.log('Data saved:', data))
+.catch(error => console.error('Error:', error));
+
         window.addEventListener("load", function() {
             var followBtn = document.getElementById("follow-btn");
 
